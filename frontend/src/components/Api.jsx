@@ -1,4 +1,4 @@
-const BASE_URL = "https://employeemanagementsystem-0m2y.onrender.com";
+const BASE_URL = "https://employee-management-system-d7ti.onrender.com";
 
 export const GetAllEmployees = async (search = "", page = 1, limit = 5) => {
   const url = `${BASE_URL}/api/employees?search=${search}&page=${page}&limit=${limit}`;
