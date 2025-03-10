@@ -1,0 +1,245 @@
+/* EmployeeTable.css - Bold, Large, and Screen-Fitting Design */
+
+/* Global container to ensure table fits the screen */
+.table-responsive-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* Table styling with bold colors */
+.table {
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  background-color: #d9baba;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1.2rem; /* Increased base font size */
+}
+
+.table thead {
+  background-color: #2c3e50; /* Dark blue header background */
+}
+
+.table thead th {
+  font-weight: 700;
+  padding: 20px;
+  border-bottom: 3px solid #3498db;
+  color: #0d0d0d;
+  text-transform: uppercase;
+  font-size: 1.15rem; /* Larger header text */
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  transition: background-color 0.3s;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(52, 152, 219, 0.08);
+}
+
+.table tbody td {
+  padding: 18px 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #e9ecef;
+  color: #2c3e50;
+  font-size: 1.1rem; /* Larger cell text */
+}
+
+/* Link styling with bold colors */
+.table a {
+  color: #3498db;
+  font-weight: 600;
+  transition: color 0.2s;
+  font-size: 1.1rem;
+}
+
+.table a:hover {
+  color: #2980b9;
+  text-decoration: underline !important;
+}
+
+/* Action buttons with larger size */
+.bi {
+  font-size: 1.4rem;
+  transition: all 0.2s;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.bi-pencil-fill {
+  color: #f39c12 !important; /* Brighter yellow */
+}
+
+.bi-pencil-fill:hover {
+  background-color: rgba(243, 156, 18, 0.15);
+  transform: scale(1.15);
+}
+
+.bi-trash-fill {
+  color: #e74c3c !important; /* Brighter red */
+}
+
+.bi-trash-fill:hover {
+  background-color: rgba(231, 76, 60, 0.15);
+  transform: scale(1.15);
+}
+
+/* Pagination section with bolder styling */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.badge.bg-primary {
+  background-color: #3498db !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 30px;
+}
+
+.pagination-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-outline-primary {
+  border: 2px solid #3498db;
+  color: #3498db;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: all 0.25s;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.btn-outline-primary.active {
+  background-color: #3498db;
+  color: rgb(15, 10, 10);
+  border-color: #3498db;
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.btn-outline-primary:disabled {
+  color: #95a5a6;
+  border-color: #95a5a6;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Striping effect with bolder colors */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
+/* Empty data state */
+.table tbody:empty:before {
+  content: "No employees found";
+  display: block;
+  text-align: center;
+  padding: 30px;
+  color: #7f8c8d;
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+/* Responsive adjustments for larger text */
+@media (max-width: 1200px) {
+  .table {
+    font-size: 1.1rem;
+  }
+
+  .table thead th {
+    padding: 18px;
+    font-size: 1.05rem;
+  }
+
+  .table tbody td {
+    padding: 16px;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 992px) {
+  .table thead {
+    display: none;
+  }
+
+  .table tbody tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .table tbody td {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    padding: 16px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 1.1rem;
+  }
+
+  .table tbody td:before {
+    content: attr(data-label);
+    font-weight: 700;
+    text-align: left;
+    color: #2c3e50;
+    margin-right: 20px;
+  }
+
+  .pagination-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .pagination-buttons {
+    justify-content: center;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .table tbody td {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .btn-outline-primary {
+    padding: 8px 14px;
+    font-size: 1rem;
+  }
+
+  /* Show fewer pagination buttons on small screens */
+  .pagination-number-button:not(.active) {
+    display: none;
+  }
+
+  .pagination-number-button.active,
+  .pagination-number-button:first-of-type,
+  .pagination-number-button:last-of-type {
+    display: block;
+  }
+}

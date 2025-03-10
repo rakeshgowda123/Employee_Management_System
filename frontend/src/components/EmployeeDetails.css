@@ -1,0 +1,120 @@
+/* EmployeeDetail.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+}
+
+.employee-card {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.employee-card-header {
+  background-color: #3f51b5;
+  color: white;
+  padding: 16px 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.employee-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: #fff;
+}
+
+.employee-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #f0f0f0;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.employee-details {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.employee-details h2 {
+  color: #3f51b5;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.employee-details p {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.employee-details strong {
+  color: #333;
+  font-weight: 600;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  display: block;
+  width: 100%;
+}
+
+.back-button:hover {
+  background-color: #303f9f;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .employee-card-body {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .employee-img {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+
+  .employee-details {
+    flex: 1;
+  }
+
+  .employee-details h2 {
+    text-align: left;
+  }
+
+  .back-button {
+    width: auto;
+  }
+}

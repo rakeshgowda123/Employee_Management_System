@@ -1,0 +1,141 @@
+/* AddEmployee.css - Enhanced Style with larger elements */
+
+/* Modal overlay with a semi-transparent gradient background */
+.modal.show {
+  background: linear-gradient(rgba(25, 25, 112, 0.7), rgba(25, 25, 112, 0.85));
+  padding-right: 0 !important;
+}
+
+/* Increase modal size and add styling */
+.modal-dialog {
+  max-width: 650px;
+  margin: 2rem auto;
+}
+
+/* Modal content styling */
+.modal-content {
+  background-color: #f5f7fa;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+/* Modal header styling */
+.modal-header {
+  border-bottom: 2px solid #4e73df;
+  padding: 20px 25px;
+  background-color: #4e73df;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* Close button styling */
+.btn-close {
+  background-color: white;
+  opacity: 0.8;
+  padding: 15px;
+}
+
+.btn-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Modal body styling */
+.modal-body {
+  padding: 30px 25px;
+  background-color: #f5f7fa;
+}
+
+/* Form styling */
+form {
+  font-size: 18px;
+}
+
+/* Label styling */
+.form-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Input field styling */
+.form-control {
+  padding: 15px 20px;
+  font-size: 18px;
+  border: 2px solid #dde2e8;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.25);
+}
+
+/* File input specific styling */
+input[type="file"].form-control {
+  padding: 12px;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #4e73df;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s;
+  margin-top: 15px;
+  width: 20%;
+  box-shadow: 0 4px 10px rgba(78, 115, 223, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #3a5ccc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(78, 115, 223, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+/* Form group spacing */
+.mb-3 {
+  margin-bottom: 25px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 1rem;
+  }
+
+  .modal-title {
+    font-size: 24px;
+  }
+
+  .form-control,
+  .btn-primary,
+  .form-label {
+    font-size: 16px;
+  }
+
+  .form-control {
+    padding: 12px 15px;
+  }
+}
